@@ -30,7 +30,7 @@ import com.madhu.aopdemo.Account;
 public class MyDemoLoggingAspect {
 	
 	@Around("execution(* com.madhu.aopdemo.service.*.getFortune(..))")
-	public Object aroundGetFoObject(ProceedingJoinPoint theProceedingJoinPoint )	throws Throwable	{
+	public Object aroundGetFortune(ProceedingJoinPoint theProceedingJoinPoint )	throws Throwable	{
 		// print out method we are advising on
 		String method = theProceedingJoinPoint.getSignature().toShortString();
 		System.out.println("\n=====>>> Executing @Around on method: " + method);
