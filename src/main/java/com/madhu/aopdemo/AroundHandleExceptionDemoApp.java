@@ -31,7 +31,11 @@ public class AroundHandleExceptionDemoApp {
 		
 		myLogger.info("Calling getFortune");
 		
-		String data = theFortuneService.getFortune();
+		//String data = theFortuneService.getFortune();
+		boolean tripWire = true;
+		//String data = theFortuneService.getFortune(tripWire);
+		String data = theFortuneService.getFortune("Bingo");
+		
 		
 		myLogger.info("\nMy fortune is: "+data);
 		

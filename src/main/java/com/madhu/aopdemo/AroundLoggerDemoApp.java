@@ -31,8 +31,8 @@ public class AroundLoggerDemoApp {
 		
 		myLogger.info("Calling getFortune");
 		
-		//String data = theFortuneService.getFortune();
-		String data = theFortuneService.getFortuneException();
+		String data = theFortuneService.getFortune();
+		//String data = theFortuneService.getFortuneException();
 		
 		myLogger.info("\nMy fortune is: "+data);
 		

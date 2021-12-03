@@ -26,14 +26,24 @@ public class TrafficFortuneService {
 		return "Expect heave traffic this morning";
 	}
 	
-	public String getFortuneException()	{
-		String message=null;
+	// has to be getFortune as method name. any other name and it will not work
+	public String getFortune(String message)	{
+		//String message=null;
 		
-		try	{
-			message.concat("Major Accident! Highway is closed");
-		}	catch(Exception e)	{
-			throw new RuntimeException("traffic disrupted due to runtime exception");
+		if (message!=null) {
+			throw new RuntimeException("Major accident! Highway is closed!");
 		}
-		return message;
+		
+		return getFortune();
+		
+	}
+	
+	public String getFortune(boolean tripWire) {
+
+		if (tripWire) {
+			throw new RuntimeException("Major accident! Highway is closed!");
+		}
+		
+		return getFortune();
 	}
 }
