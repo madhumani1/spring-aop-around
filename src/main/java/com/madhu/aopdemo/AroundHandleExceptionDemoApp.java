@@ -16,9 +16,9 @@ import com.madhu.aopdemo.service.TrafficFortuneService;
  * @author 15197
  * Create main app
  */
-public class AroundLoggerDemoApp {
+public class AroundHandleExceptionDemoApp {
 	// setup Spring logger
-	private static Logger myLogger = Logger.getLogger(AroundLoggerDemoApp.class.getName());
+	private static Logger myLogger = Logger.getLogger(AroundHandleExceptionDemoApp.class.getName());
 	public static void main(String[] args)	{
 		// read spring config java class
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(DemoConfig.class);
@@ -31,11 +31,7 @@ public class AroundLoggerDemoApp {
 		
 		myLogger.info("Calling getFortune");
 		
-		//String data = theFortuneService.getFortune();
-		boolean tripWire = true;
-		//String data = theFortuneService.getFortune(tripWire);
 		String data = theFortuneService.getFortune("Bingo");
-		
 		
 		myLogger.info("\nMy fortune is: "+data);
 		

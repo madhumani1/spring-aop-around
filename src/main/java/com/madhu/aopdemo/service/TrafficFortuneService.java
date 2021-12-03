@@ -25,4 +25,25 @@ public class TrafficFortuneService {
 		// return a fortune
 		return "Expect heave traffic this morning";
 	}
+	
+	// has to be getFortune as method name. any other name and it will not work
+		public String getFortune(String message)	{
+			//String message=null;
+			
+			if (message!=null) {
+				throw new RuntimeException("Major accident! Highway is closed!");
+			}
+			
+			return getFortune();
+			
+		}
+		
+		public String getFortune(boolean tripWire) {
+
+			if (tripWire) {
+				throw new RuntimeException("Major accident! Highway is closed!");
+			}
+			
+			return getFortune();
+		}
 }
