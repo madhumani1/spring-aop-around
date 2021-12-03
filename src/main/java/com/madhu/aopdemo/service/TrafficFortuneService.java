@@ -25,4 +25,15 @@ public class TrafficFortuneService {
 		// return a fortune
 		return "Expect heave traffic this morning";
 	}
+	
+	public String getFortuneException()	{
+		String message=null;
+		
+		try	{
+			message.concat("Major Accident! Highway is closed");
+		}	catch(Exception e)	{
+			throw new RuntimeException("traffic disrupted due to runtime exception");
+		}
+		return message;
+	}
 }
