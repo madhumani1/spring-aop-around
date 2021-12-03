@@ -34,7 +34,7 @@ public class MyDemoLoggingAspect {
 	private Logger myLogger = Logger.getLogger(AroundLoggerDemoApp.class.getName());
 		
 	@Around("execution(* com.madhu.aopdemo.service.*.getFortune(..))")
-	public Object aroundGetFoObject(ProceedingJoinPoint theProceedingJoinPoint )	throws Throwable	{
+	public Object aroundGetFortune(ProceedingJoinPoint theProceedingJoinPoint )	throws Throwable	{
 		// print out method we are advising on
 		String method = theProceedingJoinPoint.getSignature().toShortString();
 		myLogger.info("\n=====>>> Executing @Around on method: " + method);
